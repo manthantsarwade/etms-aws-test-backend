@@ -12,11 +12,11 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the JAR file...
-      - mvn clean package -DskipTests  # Ensure tests don't block builds
+      - mvn clean package -DskipTests
       - echo Building Docker images...
       - docker-compose build
-      - docker tag my-spring-app:latest $REPOSITORY_URI:latest
-      - docker tag my-spring-app:latest $REPOSITORY_URI:$IMAGE_TAG
+      - docker tag spring_boot_backend $REPOSITORY_URI:latest
+      - docker tag spring_boot_backend $REPOSITORY_URI:$IMAGE_TAG
 
   post_build:
     commands:
