@@ -15,8 +15,8 @@ phases:
       - mvn clean package -DskipTests
       - echo Building Docker images...
       - docker-compose build
-      - docker tag spring_boot_backend $REPOSITORY_URI:latest
-      - docker tag spring_boot_backend $REPOSITORY_URI:$IMAGE_TAG
+      - docker tag my-spring-app $REPOSITORY_URI:latest
+      - docker tag my-spring-app $REPOSITORY_URI:$IMAGE_TAG
 
   post_build:
     commands:
