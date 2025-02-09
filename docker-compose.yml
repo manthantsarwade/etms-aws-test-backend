@@ -14,7 +14,7 @@ services:
       - mysql_data:/var/lib/mysql
 
   backend:
-    image: my-spring-app  # Ensure you have built this image using your backend's Dockerfile
+    image: 412381779393.dkr.ecr.ap-south-1.amazonaws.com/etms:latest  # ECR Repository
     container_name: spring_boot_backend
     restart: always
     environment:
